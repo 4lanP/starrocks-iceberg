@@ -254,6 +254,3 @@ conn = pymysql.connect(host='127.0.0.1', port=9030, user='root', password='')
 ## 📜 License
 
 Dự án demo phục vụ mục đích học tập và nghiên cứu Data Lakehouse Architecture.
-
-#   s t a r r o c k s - i c e b e r g  
- 
