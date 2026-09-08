@@ -1,0 +1,20 @@
+[
+  {
+    "snapshot_id": 10001,
+    "timestamp": "2026-09-03 08:25:43",
+    "operation": "APPEND / INITIAL ETL",
+    "file_path": "C:/Users/Admin/OneDrive/Documents/demo/storage/silver/silver_snap_10001.parquet",
+    "total_records": 90245,
+    "total_revenue": 205162104.48,
+    "description": "Initial ETL ingestion from Bronze layer (Filtered COMPLETED orders)"
+  },
+  {
+    "snapshot_id": 10002,
+    "timestamp": "2026-09-03 08:25:48",
+    "operation": "UPDATE / BLACK FRIDAY PROMO",
+    "file_path": "C:/Users/Admin/OneDrive/Documents/demo/storage/silver/silver_snap_10002.parquet",
+    "total_records": 90245,
+    "total_revenue": 202637048.21999997,
+    "description": "Applied 50% discount to Electronics in HA NOI"
+  }
+]

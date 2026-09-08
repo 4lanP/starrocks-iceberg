@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # 1. Apache Iceberg REST Catalog (Dùng SQLite backend nhẹ & sẵn image local)
+  iceberg-catalog:
+    image: apache/iceberg-rest-fixture:latest
+    container_name: iceberg-catalog
+    ports:
+      - "8181:8181"
+    environment:
+      - CATALOG_WAREHOUSE=file:///data/silver
+    volumes:
+      - ./storage/silver:/data/silver
+
+  # 2. StarRocks Quickstart Container (Single-node bao gồm cả FE & BE, khởi chạy nhanh)
+  starrocks:
+    image: starrocks/allin1-ubuntu:latest
+    container_name: starrocks-demo
+    ports:
+      - "9030:9030" # MySQL Protocol Port (Query Engine)
+      - "8030:8030" # Web UI Console
+    volumes:
+      - ./storage:/data/storage
